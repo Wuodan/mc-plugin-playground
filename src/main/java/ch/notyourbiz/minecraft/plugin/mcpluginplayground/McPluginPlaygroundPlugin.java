@@ -1,14 +1,16 @@
 package ch.notyourbiz.minecraft.plugin.mcpluginplayground;
 
+import com.hakan.spinjection.SpigotBootstrap;
+import com.hakan.spinjection.annotations.Scanner;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.SingleLineChart;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Optional;
+@Scanner("ch.notyourbiz.minecraft.plugin.mcpluginplayground")
+public final class McPluginPlaygroundPlugin extends JavaPlugin {
 
-public final class McPluginPlayground extends JavaPlugin {
-
-    static boolean sneakFarts, fartCommand;
+    public static boolean fartCommand;
+    static boolean sneakFarts;
     static double fartDistance, fartTimeStart, fartTimeEnd,
             fartOffset, fartParticleSize, fartVolume, poopChance, deadlyPoopChance, nauseaChance, nauseaDistance;
     static int fartParticleCount;
@@ -17,6 +19,8 @@ public final class McPluginPlayground extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // this will start the injection process
+        SpigotBootstrap.run(this);
         saveDefaultConfig();
         sneakFarts = getConfig().getBoolean("EnableFarts", true);
         fartCommand = getConfig().getBoolean("FartCommand", true);
@@ -35,11 +39,6 @@ public final class McPluginPlayground extends JavaPlugin {
 
         if (sneakFarts) {
             getServer().getPluginManager().registerEvents(new FartListener(), this);
-        }
-
-        if (fartCommand) {
-            Optional.ofNullable(getCommand("fart"))
-                    .ifPresent(pluginCommand -> pluginCommand.setExecutor(new FartCommandExecutor()));
         }
 
         fartCount = 0;

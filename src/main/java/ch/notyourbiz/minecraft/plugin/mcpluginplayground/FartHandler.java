@@ -18,11 +18,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-import static ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlayground.*;
+import static ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlaygroundPlugin.*;
 import static java.lang.Math.*;
 
 public class FartHandler {
-    static void fart(Player player) {
+    public static void fart(Player player) {
         Particle.DustOptions options = new Particle.DustOptions(Color.fromRGB(139, 69, 19), (float) fartParticleSize);
         float yaw = player.getLocation().getYaw();
         Vector offset = new Vector(sin(toRadians(yaw)) * fartDistance, 0.25, -cos(toRadians(yaw)) * fartDistance);
@@ -43,7 +43,7 @@ public class FartHandler {
             inflictNausea(l, player);
         }
 
-        McPluginPlayground.fartCount++;
+        fartCount++;
     }
 
     private static void poop(Player player, Vector offset, Location l) {

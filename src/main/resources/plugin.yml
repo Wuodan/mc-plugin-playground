@@ -1,6 +1,6 @@
 name: mc-plugin-playground
 version: '${project.version}'
-main: ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlayground
+main: ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlaygroundPlugin
 api-version: '1.20'
 prefix: mcpluginplayground
 authors: [ DeKuen ]
