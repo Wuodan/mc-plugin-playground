@@ -2,3 +2,11 @@ name: mc-plugin-playground
 version: '${project.version}'
 main: ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlayground
 api-version: '1.20'
+prefix: mcpluginplayground
+authors: [ DeKuen ]
+description: Random farts while sneaking! Playground for plugin development
+
+commands:
+  fart:
+    description: Fart on demand
+    usage: /fart

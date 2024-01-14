@@ -1,0 +1,46 @@
+# Sneak Fart Configuration
+
+# Enable random farts while sneaking (true or false)
+EnableFarts: true
+
+# Fart on demand with /fart (true or false)
+FartCommand: true
+
+# Percent chance that poop will spawn with fart from 0 to 1
+# Set to 0 to disable
+PoopChance: 0.1
+
+# Percent chance that deadly poop will spawn when farting from 0 to 1
+# Set to 0 to disable
+DeadlyPoopChance: 0.05
+
+# Percent chance that the fart will inflict nausea from 0 to 1
+# Set to 0 to disable
+NauseaChance: 1
+
+# Name of the poop
+# Will appear as "Player's Poop"
+PoopName: "Poop"
+
+# Distance from the player in blocks that the fart should come out
+FartDistance: 0.8
+
+# Time in seconds that the fart should come out after a player starts sneaking
+# A random value is selected between FartTimeStart and FartTimeEnd
+FartTimeStart: 10
+FartTimeEnd: 60
+
+# How far players must be from the fart to be inflicted with nausea in blocks
+NauseaDistance: 3
+
+# How spread apart the fart particles should be in blocks
+FartOffset: 0.25
+
+# How many fart particles to spawn
+FartParticleCount: 25
+
+# Size of fart particles
+FartParticleSize: 1
+
+# Volume level of fart sound
+FartVolume: 1
