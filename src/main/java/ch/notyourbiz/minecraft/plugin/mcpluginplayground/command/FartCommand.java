@@ -27,8 +27,8 @@ public class FartCommand {
     }
 
     @Subcommand(
-            permission = "fartInject.use",
-            permissionMessage = "You don't have permission to use this command!"
+            // permission = "fartInject.use",
+            // permissionMessage = "You don't have permission to use this command!"
     )
     public void execute(@NotNull @Executor CommandSender sender) {
         if (!fartCommand) {
