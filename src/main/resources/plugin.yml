@@ -1,0 +1,4 @@
+name: mc-plugin-playground
+version: '${project.version}'
+main: ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlayground
+api-version: '1.20'
