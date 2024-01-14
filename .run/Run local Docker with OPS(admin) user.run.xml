@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run local Docker with debug" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+  <configuration default="false" name="Run local Docker with OPS(admin) user" type="docker-deploy" factoryName="docker-image" server-name="Docker">
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="itzg/minecraft-server" />
@@ -13,6 +13,10 @@
             <DockerEnvVarImpl>
               <option name="name" value="JVM_OPTS" />
               <option name="value" value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="OPS" />
+              <option name="value" value="DeKuen" />
             </DockerEnvVarImpl>
             <DockerEnvVarImpl>
               <option name="name" value="TYPE" />
