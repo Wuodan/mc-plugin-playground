@@ -43,11 +43,20 @@
                     <relocations>
                         <relocation>
                             <pattern>org.bstats</pattern>
-                            <shadedPattern>${project.groupId}.${project.artifactId}</shadedPattern>
+                            <shadedPattern>${project.groupId}.${project.artifactId}.shaded.bstats</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>de.tr7zw.changeme.nbtapi</pattern>
-                            <shadedPattern>${project.groupId}.${project.artifactId}</shadedPattern>
+                            <shadedPattern>${project.groupId}.${project.artifactId}.shaded.nbtapi</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>com.hakan</pattern>
+                            <shadedPattern>${project.groupId}.${project.artifactId}.shaded.hakan</shadedPattern>
+                        </relocation>
+                        <!-- hakan uses javax -->
+                        <relocation>
+                            <pattern>javax.annotation</pattern>
+                            <shadedPattern>${project.groupId}.${project.artifactId}.shaded.javax.annotation</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -84,16 +93,19 @@
             <version>3.0.2</version>
             <scope>compile</scope>
         </dependency>
+        <!-- for nbtapi -->
         <dependency>
             <groupId>de.tr7zw</groupId>
             <artifactId>item-nbt-api</artifactId>
             <version>2.12.2</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>24.1.0</version>
             <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
         <!-- Core of dependency injection -->
         <dependency>

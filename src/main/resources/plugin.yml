@@ -7,6 +7,11 @@ authors: [ DeKuen ]
 description: Random farts while sneaking! Playground for plugin development
 
 permissions:
+  mcpluginplayground.command.*:
+    description: Gives access to all mcpluginplayground commands
+    default: true
+    children:
+      mcpluginplayground.command.fart: true
   mcpluginplayground.command.fart:
     description: Allows use to command /fart
     default: true
