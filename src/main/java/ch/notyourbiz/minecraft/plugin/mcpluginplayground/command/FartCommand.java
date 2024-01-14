@@ -27,7 +27,7 @@ public class FartCommand {
     }
 
     @Subcommand(
-            permission = "fart.command.use",
+            permission = "mcpluginplayground.command.fart",
             permissionMessage = "You don't have permission to use this command!"
     )
     public void execute(@NotNull @Executor CommandSender sender) {

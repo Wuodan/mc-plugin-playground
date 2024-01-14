@@ -1,4 +1,4 @@
-name: mc-plugin-playground
+name: mcpluginplayground
 version: '${project.version}'
 main: ch.notyourbiz.minecraft.plugin.mcpluginplayground.McPluginPlaygroundPlugin
 api-version: '1.20'
@@ -7,6 +7,6 @@ authors: [ DeKuen ]
 description: Random farts while sneaking! Playground for plugin development
 
 permissions:
-  fart.command.use:
+  mcpluginplayground.command.fart:
     description: Allows use to command /fart
     default: true

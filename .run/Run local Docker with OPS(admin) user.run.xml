@@ -3,7 +3,7 @@
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="itzg/minecraft-server" />
-        <option name="containerName" value="mc-plugin-playground" />
+        <option name="containerName" value="mcpluginplayground" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
@@ -36,7 +36,7 @@
             </DockerPortBindingImpl>
           </list>
         </option>
-        <option name="commandLineOptions" value="--mount type=bind,source=$PROJECT_DIR$/target/mc-plugin-playground-0.1-SNAPSHOT.jar,target=/plugins/mc-plugin-playground-0.1-SNAPSHOT.jar,readonly" />
+        <option name="commandLineOptions" value="--mount type=bind,source=$PROJECT_DIR$/target/mcpluginplayground-0.1-SNAPSHOT.jar,target=/plugins/mcpluginplayground-0.1-SNAPSHOT.jar,readonly" />
       </settings>
     </deployment>
     <method v="2">

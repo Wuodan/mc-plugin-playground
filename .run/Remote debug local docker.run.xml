@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Remote debug local docker" type="Remote">
-    <module name="mc-plugin-playground" />
+    <module name="mcpluginplayground" />
     <option name="USE_SOCKET_TRANSPORT" value="true" />
     <option name="SERVER_MODE" value="false" />
     <option name="SHMEM_ADDRESS" />
