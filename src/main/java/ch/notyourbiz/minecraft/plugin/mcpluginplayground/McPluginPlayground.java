@@ -45,7 +45,7 @@ public final class McPluginPlayground extends JavaPlugin {
         fartCount = 0;
 
         // bStats integration
-        int pluginId = 12663; // <-- Replace with the id of your plugin!
+        int pluginId = 20743; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);
         metrics.addCustomChart(new SingleLineChart("fart_count", () -> fartCount));
     }
