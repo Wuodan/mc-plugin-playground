@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="local Docker debug" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+  <configuration default="false" name="Run local Docker with debug" type="docker-deploy" factoryName="docker-image" server-name="Docker">
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="itzg/minecraft-server" />
@@ -11,12 +11,16 @@
               <option name="value" value="true" />
             </DockerEnvVarImpl>
             <DockerEnvVarImpl>
-              <option name="name" value="TYPE" />
-              <option name="value" value="SPIGOT" />
-            </DockerEnvVarImpl>
-            <DockerEnvVarImpl>
               <option name="name" value="JVM_OPTS" />
               <option name="value" value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="OPS" />
+              <option name="value" value="DeKuen" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="TYPE" />
+              <option name="value" value="SPIGOT" />
             </DockerEnvVarImpl>
           </list>
         </option>
